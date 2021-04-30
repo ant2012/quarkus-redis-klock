@@ -56,16 +56,14 @@
     </build>
 
     <distributionManagement>
-        <repository>
-            <id>repo</id>
-            <name>User Project Releases</name>
-            <url>http://ops.keking.cn:8081/nexus/content/repositories/releases</url>
-        </repository>
         <snapshotRepository>
-            <id>repo</id>
-            <name>User Project SNAPSHOTS</name>
-            <url>http://ops.keking.cn:8081/nexus/content/repositories/snapshots</url>
+            <id>nexus-snapshots</id>
+            <url>${nexus.snapshots.url}</url>
         </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <url>${nexus.releases.url}</url>
+        </repository>
     </distributionManagement>
 
 </project>
